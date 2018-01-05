@@ -1,0 +1,57 @@
+<!--
+  Copyright (c) 2017, the Dart project authors.  Please see the AUTHORS file
+  for details. All rights reserved. Use of this source code is governed by a
+  BSD-style license that can be found in the LICENSE file.
+<material-drawer persistent #drawer="drawer" [attr.end]="end ? '' : null">
+-->
+<material-drawer persistent #drawer="drawer" >
+    <material-list *deferredContent>
+        <div group class="mat-drawer-spacer"></div>
+        <div group>
+            <material-list-item>
+                <material-icon icon="inbox"></material-icon>Inbox
+            </material-list-item>
+            <material-list-item>
+                <material-icon icon="star"></material-icon>Star
+            </material-list-item>
+            <material-list-item>
+                <material-icon icon="send"></material-icon>Sent Mail
+            </material-list-item>
+            <material-list-item>
+                <material-icon icon="drafts"></material-icon>Drafts
+            </material-list-item>
+        </div>
+        <div group>
+            <div label>Tags</div>
+            <material-list-item>
+                <material-icon icon="star"></material-icon>Favorites
+            </material-list-item>
+        </div>
+    </material-list>
+</material-drawer>
+<material-content>
+    <header class="material-header shadow">
+        <div class="material-header-row">
+            <material-button icon
+                             class="material-drawer-button" (trigger)="drawer.toggle()">
+                <material-icon icon="menu"></material-icon>
+            </material-button>
+            <span class="material-header-title">Home</span>
+            <div class="material-spacer"></div>
+            <!--
+            <nav class="material-navigation">
+                <a href="#AppLayout">Link 1</a>
+            </nav>
+            <nav class="material-navigation">
+                <a href="#AppLayout">Link 2</a>
+            </nav>
+            <nav class="material-navigation">
+                <a href="#AppLayout">Link 3</a>
+            </nav>
+            -->
+        </div>
+    </header>
+    <div>
+        Dashboard Content goes here.
+    </div>
+</material-content>
